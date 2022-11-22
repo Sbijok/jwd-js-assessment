@@ -40,9 +40,19 @@ window.addEventListener('DOMContentLoaded', () => {
       a: 3,
     },
     {
-      q: 'What is the capital of Australia',
+      q: 'What is the capital of Australia?',
       o: ['Sydney', 'Canberra', 'Melbourne', 'Perth'],
       a: 1,
+    },
+    {
+      q: 'What is the constellation on Australia’s flag?',
+      o: ['The Seven Sisters', 'Orion the Hunter', 'The Southern Cross', 'Emu in the Sky'],
+      a: 2,
+    },
+    {
+      q: 'When is Australia Day?',
+      o: ['May 8', 'January 25', 'June 10', 'January 26'],
+      a: 3,
     },
   ];
 
@@ -75,11 +85,16 @@ window.addEventListener('DOMContentLoaded', () => {
         radioElement = document.querySelector('#' + r);
 
         if (quizItem.a == i) {
+          document.quizItem.style.backgroundColor = 'green';
           //change background color of li element here
         }
 
         if (radioElement.checked) {
           // code for task 1 goes here
+          // I am aware that this incorrect I am just trying to have something here
+          let score = 0; {
+            if (quizItem.a == score) {score ++}
+          } 
         }
       }
     });
@@ -88,3 +103,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // call the displayQuiz function
   displayQuiz();
 });
+
+// setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+}
